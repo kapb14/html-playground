@@ -23,19 +23,22 @@
 </head>
 <body>
 
-<div style="width:90%">
 
-  <div class="panel panel-default" style="position: relative;">
-    <div class="panel-body">Header</div>
-    <div class="panel-footer">Простая форма, для упрощения создания новой учетной записи сотрудника.</div>  
+
+  <div class="panel panel-default">
+    <div class="panel-body text-center"><h2>Header</h2></div>
+    <div class="panel-footer text-center">Простая форма, для упрощения создания новой учетной записи сотрудника.</div>  
   </div>
   
   
   
-  <div style="position: relative;">  
-  
-    <div class="container-fluid" style="float: left; width: 50%;">
-      <form class="form-horizontal">
+  <div class="row"> <!-- ROW_CLASS START -->
+
+    <div class="col-sm-1"></div>
+    
+    <form class="form-horizontal">
+
+    <div class="col-sm-5">
 
 
       <!-- Фамилия -->
@@ -87,13 +90,9 @@
           <input type="email" class="form-control" id="mail" placeholder="Email">
         </div>
       </div>
-  
-      </form>
     </div>
   
-    <div class="container-fluid" style="float: left; width: 50%;">
-    <form class="form-horizontal">
-
+    <div class="col-sm-5">
 
       <!-- Login -->
       <div class="form-group">
@@ -144,26 +143,22 @@
           <input type="login" class="form-control" id="login" placeholder="Lastname">
         </div>
       </div>
-
-    </form>
     </div>
-  
-  
-  <div class="container-fluid" style="clear: both;">
-  
-    <div class="form-group">
-      <div class="col-sm-12">
-        <button type="submit" class="btn btn-success btn-block">Подтвердить</button>
-      </div>
+
+    <div class="col-sm-1"></div>
+    
+    <div class="col-sm-12">
+      <button type="submit" class="btn btn-success btn-block">Подтвердить</button>
     </div>
+    
+  </form>
+
   
-  </div>
   
-  
-  </div>
+  </div> <!-- ROW_CLASS END -->
 
 
-</div>
+
 
 
 
