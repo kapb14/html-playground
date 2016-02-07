@@ -1,0 +1,84 @@
+<!-- http://advancedcase.blogspot.ru/2013/06/hta-html-defined-guis-for-your.html?m=1 -->
+<!-- а вот его источник и вдохновитель - http://9to5it.com/using-html-applications-as-a-powershell-gui -->
+
+
+<head>
+<title>sample-hta</title>
+<HTA:APPLICATION ID="oHTA"
+     APPLICATIONNAME="HTA Test"
+     SCROLL="no"
+     SINGLEINSTANCE="yes"
+     WINDOWSTATE="maximize"
+>
+</head>
+
+
+<!-- 
+<SCRIPT LANGUAGE="javascript">
+    function Window_onLoad(){  // resize to quarter of screen area, centered
+       window.resizeTo(screen.availWidth/2,screen.availHeight/2);
+       window.moveTo(screen.availWidth/4,screen.availHeight/4);
+       //alert("running");
+    }
+   window.onload=Window_onLoad;
+</SCRIPT> 
+-->
+
+
+
+
+<SCRIPT LANGUAGE="javascript">
+
+    function NoContextMenu(){
+      alert("Sorry, but right-click is not allowed.");
+    };
+
+    function Window_onLoad(){
+      //   Use the following line to disable right-click menu and prevent View Source
+      document.oncontextmenu = new Function ( "NoContextMenu(); return false" );
+
+      //   Resize to quarter of screen area, centered
+      window.resizeTo(screen.availWidth/2,screen.availHeight/2);
+      window.moveTo(screen.availWidth/4,screen.availHeight/4);
+
+      //   Initialise vars in case the HTA is called without the expected code
+      num1=0;
+      str1='';
+
+      //   Passed-in code - will execute to set variables
+      var arrParams = oHTA.commandLine.split('^');
+      for (i = 1; i < arrParams.length; ++i) {
+          //   next 2 lines needed for PowerShell method of calling the HTA
+          arrParams[i]=arrParams[i].replace(/"/g,'');    // delete any "
+          arrParams[i]=arrParams[i].replace(/\|/g,'"');  //  | become "
+          //  alert(arrParams[i]);
+          eval(arrParams[i]);
+      }
+
+      //   SCRIPT-specific code : set controls from executed code
+      txt_num1.value=num1;
+      txt_str1.value=str1;
+    };
+    
+    function Set_Env_Vars(){
+      //   Write PowerShell code (for exec later) to testhta.ps in %TEMP% folder
+      var oWSS = new ActiveXObject("wscript.shell");
+      strBat='Echo $ZZ_NUM1=' + txt_num1.value + '; $ZZ_STR1="' + txt_str1.value + '" > "%TEMP%"\\testhta.ps';
+      oWSS.run('cmd /C ' + strBat ,0,true);
+      oWSS = null;
+      window.close();
+    };
+
+    window.onload=Window_onLoad;
+</SCRIPT>
+
+<BODY bgcolor="#ccccFF" > <!-- onmousedown = "DisplayMessage" -->
+<h1>Hello!</h1>
+Just a little test....
+<P>
+Number &nbsp; <input type="text" value="" name="txt_num1"">
+<p> 
+String &nbsp; <input type="text" value="" name="txt_str1"">
+<p> 
+<input type="button" value="Return these to the batch" name="run_button"  onClick="Set_Env_Vars()"><p> 
+</BODY>
