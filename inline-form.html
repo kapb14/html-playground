@@ -14,20 +14,18 @@
 
   <title>ADV.ADMIN::Создание нового сотрудника</title>
   
-  <link rel='stylesheet' href='css/bootstrap.min.css' type='text/css' media='all'>
+  <!-- <link rel='stylesheet' href='css/bootstrap.min.css' type='text/css' media='all'> -->
+  <link rel='stylesheet' href='bootstrap/css/bootstrap.min.css' type='text/css' media='all'>
+  
 
   <script src="js/jquery.min.js"></script>
-  <script src='js/bootstrap.min.js'></script>
+<!--  <script src='js/bootstrap.min.js'></script> -->
 
+  <script type="text/javascript" src='bootstrap/js/bootstrap.min.js'></script>
 
 
 </head>
 <body>
-
-
-
-
-
 
 
   <div class="panel panel-default">
@@ -35,7 +33,9 @@
     <div class="panel-footer text-center">Простая форма, для упрощения создания новой учетной записи сотрудника.</div>  
   </div>
   
+
   
+
   
   <div class="panel panel-default col-sm-6 col-sm-offset-1">
     <div class="panel-heading">Форма</div>
@@ -48,13 +48,14 @@
       <div class="form-group col-sm-6 has-warning has-feedback">
         <label class="sr-only" for="InputLogin">Login</label>
         <input type="login" class="form-control input-sm box-shadow" id="InputLogin" placeholder="ivanov">
-        <!-- <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span> -->
+       
       </div>
       <div class="form-group col-sm-6">
         <label class="sr-only" for="InputPassword">Пароль</label>
         <input type="password" class="form-control input-sm" id="InputPassword" placeholder="p@s$w0rD">
       </div>
       
+
       
       <div class="form-group col-sm-6">
         <label class="sr-only" for="InputEmailPersonal">Personal Email</label>
@@ -124,21 +125,68 @@
       <!-- <button type="submit" class="btn btn-default">Войти</button> -->
 
     </form>
+
+
+        <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModalSubmit">Подтвердить <small>(модальное окно)</small></button>
+        <div class="modal fade" id="myModalSubmit" tabindex="-1" role="dialog" aria-labelledby="myModalLabelSubmit" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabelSubmit">Название модали</h4>
+              </div>
+              <div class="modal-body">
+                <kbd>
+                  C:\ > ADV.New-Employee.ps1 -Login -Password -EmailPersonal
+                </kbd>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
     </div> <!-- PANEL_BODY -->
 
     <div class="panel panel-primary col-sm-12">
-      <div class="panel-heading">Powershell Output:</div>
+      <!-- <div class="panel-heading">Powershell Output:</div> -->
       <div class="panel-body">
-        <kbd>
-          C:\ > ADV.New-Employee.ps1 -Login -Password -EmailPersonal  
-        </kbd>
+        <div class="alert alert-info fade in">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+          "Алерт с возможностью закрытия"<br />
+          <kbd>
+            C:\ > ADV.New-Employee.ps1 -Login -Password -EmailPersonal
+          </kbd>        
+        </div>  
       </div>
     </div>
 
 
     </div>
   
-  
+<!-- BEGIN OF JAVASCRIPT TESTS -->
+<!--   <div class="panel panel-info col-sm-6 col-sm-offset-1">
+    <div class="panel-body">
+
+      <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+
+      <div class="alert alert-warning fade in">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
+      </div>
+      
+
+    </div>
+    <div class="panel-footer">
+      <span class="label label-primary">Для тестов JavaScript</span>
+    </div>
+  </div>
+ -->
+ <!-- END OF JAVASCRIPT TESTS -->  
 
 
 
