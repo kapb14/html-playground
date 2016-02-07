@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- 
+    Простая форма, для упрощения создания новой учетной записи сотрудника.
+  
+    OSX:  /Users/karushin/projects/ADV.NewEmployee_app/index.html
+    Win:  
+
+    background-color: cyan;
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+
+  <title>ADV.ADMIN::Создание нового сотрудника</title>
+  
+  <link rel='stylesheet' href='css/bootstrap.min.css' type='text/css' media='all'>
+
+  <script src="js/jquery.min.js"></script>
+  <script src='js/bootstrap.min.js'></script>
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+  <div class="panel panel-default">
+    <div class="panel-body text-center"><h2>Header</h2></div>
+    <div class="panel-footer text-center">Простая форма, для упрощения создания новой учетной записи сотрудника.</div>  
+  </div>
+  
+  
+  
+  <div class="panel panel-default col-sm-6 col-sm-offset-1">
+    <div class="panel-heading">Форма</div>
+    <div class="panel-body">
+
+    <form role="form">
+
+    <!-- http://bootstrap-3.ru/css.php?#forms-controls -->
+
+      <div class="form-group col-sm-6 has-warning has-feedback">
+        <label class="sr-only" for="InputLogin">Login</label>
+        <input type="login" class="form-control input-sm box-shadow" id="InputLogin" placeholder="ivanov">
+        <!-- <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span> -->
+      </div>
+      <div class="form-group col-sm-6">
+        <label class="sr-only" for="InputPassword">Пароль</label>
+        <input type="password" class="form-control input-sm" id="InputPassword" placeholder="p@s$w0rD">
+      </div>
+      
+      
+      <div class="form-group col-sm-6">
+        <label class="sr-only" for="InputEmailPersonal">Personal Email</label>
+        <input type="email" class="form-control input-sm" id="InputEmailPersonal" placeholder="ivanov@mail.ru">
+      </div>
+      <div class="form-group col-sm-6">
+        <label class="sr-only" for="InputEmailWork">Work Email</label>
+        <input type="email" class="form-control input-sm" id="InputEmailWork" placeholder="ivanov@adv.ru">
+      </div>
+
+
+      <div class="form-group col-sm-6">
+        <label class="sr-only" for="InputMobile">Mobile</label>
+        <input type="tel" class="form-control input-sm" id="InputMobile" placeholder="+7 926 413 3783">
+      </div>
+      <div class="form-group col-sm-6">
+        <label class="sr-only" for="InputSkype">Skype</label>
+        <input type="login" class="form-control input-sm" id="InputSkype" placeholder="Skype_ID">
+      </div>
+
+
+      <div class="form-group col-sm-6">
+        <label class="sr-only" for="InputBirthday">Birthday</label>
+        <input type="date" class="form-control input-sm" id="InputBirthday" placeholder="25.10.1986">
+      </div>
+      <div class="form-group col-sm-6">
+        <label class="sr-only" for="InputHireDate">Hire date</label>
+        <input type="date" class="form-control input-sm" id="InputHireDate" placeholder="07.02.2016">
+      </div>
+
+
+      <div class="form-group col-sm-12">
+        <label class="sr-only" for="InputDepartment">Department</label>
+        <!-- <input type="text" class="form-control input-sm" id="InputDepartment" placeholder="Department"> -->
+        <select class="form-control input-sm" id="Department">
+          <option>Проектный офис</option>
+          <option>Аналитика и дизайн</option>
+          <option>PHP/Bitrix</option>
+          <option>Sharepoint</option>
+          <option>Frontend</option>
+        </select>
+        <span class="help-block">Информация для справки по заполнению поля "Отдел" <span class="label label-danger">Важно</span>
+        </span>
+      </div>
+
+
+      <div class="form-group col-sm-12">
+        <label class="sr-only" for="InputTitle">Title</label>
+        <!-- <input type="text" class="form-control input-sm" id="InputTitle" placeholder="Title"> -->
+        <select class="form-control input-sm" id="Title">
+          <option>Разработчик PHP/Bitrix</option>
+          <option>Разработчик Frontend</option>
+          <option>Разработчик Sharepoint</option>
+          <option>Ведущий разработчик PHP/Bitrix</option>
+          <option>Менеджер проектов</option>
+        </select>
+        <span class="help-block">Информация для справки по заполнению поля "Должность"</span>
+      </div>
+
+
+
+      <div class="col-sm-12">
+        <button type="submit" class="btn btn-success btn-block">Подтвердить</button>
+        <br /><p class="bg-danger">Информация для справки</p>
+      </div>
+
+      <!-- <button type="submit" class="btn btn-default">Войти</button> -->
+
+    </form>
+    </div> <!-- PANEL_BODY -->
+
+    <div class="panel panel-primary col-sm-12">
+      <div class="panel-heading">Powershell Output:</div>
+      <div class="panel-body">
+        <kbd>
+          C:\ > ADV.New-Employee.ps1 -Login -Password -EmailPersonal  
+        </kbd>
+      </div>
+    </div>
+
+
+    </div>
+  
+  
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

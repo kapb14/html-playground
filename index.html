@@ -38,71 +38,75 @@
   
   <div class="row"> <!-- ROW_CLASS START -->
 
-    <div class="col-sm-1"></div>
+    <!-- <div class="col-sm-1"></div> -->
     
     <form class="form-horizontal">
 
-    <div class="col-sm-5">
+    <div class="col-sm-5 col-sm-offset-1">
 
+      <p class="help-block">Example block-level help text here.</p>
 
       <!-- Фамилия -->
       <div class="form-group">
-      <label for="login" class="col-sm-6 control-label">Фамилия</label>
+      <label for="lastname" class="col-sm-6 control-label">Фамилия</label>
         <div class="col-sm-6">
-          <input type="login" class="form-control" id="login" placeholder="Lastname">
+          <input type="text" class="form-control input-sm" id="lastname" placeholder="Иванов">
         </div>
       </div>
 
       <!-- Имя -->
       <div class="form-group">
-      <label for="login" class="col-sm-6 control-label">Имя</label>
+      <label for="firstname" class="col-sm-6 control-label">Имя</label>
         <div class="col-sm-6">
-          <input type="login" class="form-control" id="login" placeholder="Firstname">
+          <input type="text" class="form-control input-sm" id="firstname" placeholder="Иван">
         </div>
       </div>
 
       <!-- День рождения -->
       <div class="form-group">
-      <label for="login" class="col-sm-6 control-label">День рождения</label>
+      <label for="birthday" class="col-sm-6 control-label">День рождения</label>
         <div class="col-sm-6">
-          <input type="login" class="form-control" id="login" placeholder="День рождения">
+          <input type="date" class="form-control input-sm" id="birthday" placeholder="День рождения">
         </div>
       </div>
 
       <!-- Skype -->
       <div class="form-group">
-      <label for="login" class="col-sm-6 control-label">Skype</label>
+      <label for="skype" class="col-sm-6 control-label">Skype</label>
         <div class="col-sm-6">
-          <input type="login" class="form-control" id="login" placeholder="Skype">
+          <input type="login" class="form-control input-sm" id="skype" placeholder="skype_id">
         </div>
       </div>
 
 
       <!-- Мобильный телефон -->
       <div class="form-group">
-      <label for="login" class="col-sm-6 control-label">Мобильный телефон</label>
+      <label for="mobile" class="col-sm-6 control-label">Мобильный телефон</label>
         <div class="col-sm-6">
-          <input type="login" class="form-control" id="login" placeholder="Мобильный телефон">
+          <input type="tel" class="form-control input-sm" id="mobile" placeholder="Мобильный телефон">
         </div>
       </div>
 
 
       <!-- Личный Email -->
       <div class="form-group">
-      <label for="mail" class="col-sm-6 control-label">Личный Email</label>
+      <label for="emailPersonal" class="col-sm-6 control-label">Личный Email</label>
         <div class="col-sm-6">
-          <input type="email" class="form-control" id="mail" placeholder="Личный Email">
+          <input type="email" class="form-control input-sm" id="emailPersonal" placeholder="Личный Email">
         </div>
       </div>
     </div>
+
   
     <div class="col-sm-5">
+
+      <p class="help-block">Example block-level help text here.</p>
 
       <!-- Login -->
       <div class="form-group">
       <label for="login" class="col-sm-6 control-label">Login</label>
         <div class="col-sm-6">
-          <input type="login" class="form-control" id="login" placeholder="Login">
+          <input type="login" class="form-control input-sm" id="login" placeholder="Login">
         </div>
       </div>
 
@@ -111,45 +115,52 @@
       <div class="form-group">
       <label for="pass" class="col-sm-6 control-label">Пароль</label>
         <div class="col-sm-6">
-        <input type="password" class="form-control" id="pass" placeholder="Password">
+        <input type="password" class="form-control input-sm" id="pass" placeholder="Password">
         </div>
       </div>
 
 
       <!-- Корпоративный email -->
       <div class="form-group">
-      <label for="login" class="col-sm-6 control-label">Корпоративный email</label>
+      <label for="emailWork" class="col-sm-6 control-label">Корпоративный email</label>
         <div class="col-sm-6">
-          <input type="login" class="form-control" id="login" placeholder="Корпоративный email">
+          <input type="email" class="form-control input-sm" id="emailWork" placeholder="Корпоративный email">
         </div>
       </div>
       
       <!-- Отдел -->
       <div class="form-group">
-      <label for="login" class="col-sm-6 control-label">Отдел</label>
+      <label for="Department" class="col-sm-6 control-label">Отдел</label>
         <div class="col-sm-6">
-          <input type="login" class="form-control" id="login" placeholder="Отдел">
+          <!-- <input type="text" class="form-control input-sm" id="Department" placeholder="Отдел"> -->
+          <select class="form-control input-sm" id="Department">
+            <option>Проектный офис</option>
+            <option>Аналитика и дизайн</option>
+            <option>PHP/Bitrix</option>
+            <option>Sharepoint</option>
+            <option>Frontend</option>
+          </select>
         </div>
       </div>
 
       <!-- Должность -->
       <div class="form-group">
-      <label for="login" class="col-sm-6 control-label">Должность</label>
+      <label for="Title" class="col-sm-6 control-label">Должность</label>
         <div class="col-sm-6">
-          <input type="login" class="form-control" id="login" placeholder="Должность">
+          <input type="text" class="form-control input-sm" id="Title" placeholder="Должность">
         </div>
       </div>
 
       <!-- Дата выхода на работу -->
       <div class="form-group">
-      <label for="login" class="col-sm-6 control-label">Дата выхода на работу</label>
+      <label for="dateHire" class="col-sm-6 control-label">Дата выхода на работу</label>
         <div class="col-sm-6">
-          <input type="login" class="form-control" id="login" placeholder="Дата выхода">
+          <input type="date" class="form-control input-sm" id="dateHire" placeholder="Дата выхода">
         </div>
       </div>
     </div>
 
-    <div class="col-sm-1"></div>
+    <!-- <div class="col-sm-1"></div> -->
     
     <div class="col-sm-12">
       <button type="submit" class="btn btn-success btn-block">Подтвердить</button>
