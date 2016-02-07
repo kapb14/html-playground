@@ -14,25 +14,55 @@
 </head>
 <body>
 
-  <div class="panel panel-default"> 
-    <div class="panel-body text-center"><h2>Header</h2></div>
-    <div class="panel-footer text-center">Подзаголовок</div>  
+
+  <div class="page-header">
+    <h2>Header <small>с маленьким текстом</small></h2>
   </div>
-  
-  
-  <div class="panel panel-default col-sm-6 col-sm-offset-1"> <!-- PANEL -->
-    <div class="panel-heading">Форма</div>
-    <div class="panel-body"> <!-- PANEL_BODY -->
 
-      <div class="col-sm-12">
-      <br /><p class="bg-danger">Информация для справки</p>
+  
+  <div class="col-sm-6 col-sm-offset-1"> <!-- HALF-SIZED --> 
 
-        <div class="alert alert-info fade in">
+    <div class="panel panel-success"> <!-- PANEL -->
+      <div class="panel-heading">Форма <span class="badge">с баджиком</span></div>
+      <div class="panel-body"> <!-- PANEL_BODY -->
+
+        <p class="bg-info">info</p>
+
+        <p>
+          <span class="label label-default">Default</span>
+          <span class="label label-primary">Primary</span>
+          <span class="label label-success">Success</span>
+          <span class="label label-info">Info</span>
+          <span class="label label-warning">Warning</span>
+          <span class="label label-danger">Danger</span>
+        </p>
+
+        <div class="alert alert-warning fade in">
           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-          "Алерт с возможностью закрытия"<br />
+          "<strong>Алерт</strong> с <em>возможностью</em> закрытия"<br />
         </div>  
 
-      </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">заголовок панели</div>
+          <div class="panel-body">
+            тело панели
+          </div>
+        </div>
+
+        <div class="well">текст в ячейке</div>
+
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+            Первая опция&mdash;выбирайте его, если вам нравится этот пункт
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+            Вторая опция - это несколько другое, и она отменяет выбор первой опции
+          </label>
+        </div>
 
 <!--       
       <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModalSubmit">Подтвердить <small>(модальное окно)</small></button>
@@ -55,10 +85,10 @@
           </div>
       </div>
  -->
- 
-    </div> <!-- PANEL_BODY -->
-  </div> <!-- PANEL -->
-  
+
+      </div> <!-- PANEL_BODY -->
+    </div> <!-- PANEL -->
+  </div> <!-- HALF-SIZED --> 
  
 </body>
 </html>
